@@ -1,0 +1,425 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/material_deep_teal_500"
+    android:id="@+id/sv"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        android:background="@color/material_deep_teal_500">
+
+
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:maxLength="15"
+            android:gravity="center"
+            android:textSize="38dp"
+            android:background="@drawable/abc_list_selector_background_transition_holo_dark"
+            android:inputType="numberDecimal|numberSigned"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/textView16"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Input"
+            android:id="@+id/textView16"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_alignStart="@+id/editText1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Output"
+            android:id="@+id/textView17"
+            android:layout_below="@+id/editText1"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_alignStart="@+id/editText1" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="450dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:background="@drawable/abc_list_selector_background_transition_holo_dark"
+            android:text="@string/Convert"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/textView17"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Distance"
+            android:id="@+id/textView18"
+            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4DB6AC"
+            android:onClick="Miles"
+            android:text="@string/Miles"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/button5"
+            android:layout_alignLeft="@+id/button7"
+            android:layout_alignStart="@+id/button7" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00796B"
+            android:onClick="Kilometers"
+            android:text="@string/KM"
+            android:textColor="#F1F1F1"
+            android:textAllCaps="false"
+            android:layout_alignTop="@+id/button2a"
+            android:layout_alignLeft="@+id/button1"
+            android:layout_alignStart="@+id/button1" />
+
+        <Button
+            android:id="@+id/button2a"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:backgroundTint="#4DB6AC"
+            android:minWidth="250dp"
+            android:textSize="11dp"
+            android:onClick="Liters"
+            android:text="@string/feetmeters"
+            android:textColor="#F1F1F1"
+            android:layout_alignTop="@+id/button10"
+            android:layout_toRightOf="@+id/button5"
+            android:layout_toLeftOf="@+id/button10"
+            android:layout_toStartOf="@+id/button10" />
+
+        <Button
+            android:id="@+id/button6a"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:backgroundTint="#00796B"
+            android:maxHeight="50dp"
+            android:minWidth="250dp"
+            android:textSize="11dp"
+            android:onClick="Gallons"
+            android:text="@string/metersfeet"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/button5"
+            android:layout_alignRight="@+id/button2a"
+            android:layout_alignEnd="@+id/button2a"
+            android:layout_toRightOf="@+id/button1"
+            android:layout_toEndOf="@+id/button1" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:backgroundTint="#00796B"
+            android:text="@string/incm"
+            android:textColor="#F1F1F1"
+            android:id="@+id/button10"
+            android:layout_below="@+id/textView18"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:backgroundTint="#4DB6AC"
+            android:textColor="#F1F1F1"
+            android:text="@string/cmin"
+            android:id="@+id/button11"
+            android:layout_below="@+id/button10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Temperature"
+            android:id="@+id/textView19"
+            android:textAllCaps="false"
+            android:layout_below="@+id/button1"
+            android:layout_alignLeft="@+id/button1"
+            android:layout_alignStart="@+id/button1" />
+
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00796B"
+            android:minWidth="250dp"
+            android:onClick="C"
+            android:text="@string/Celsius"
+            android:textColor="#F1F1F1"
+            android:textAllCaps="false"
+            android:layout_below="@+id/textView19"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00796B"
+            android:minWidth="250dp"
+            android:onClick="F"
+            android:text="@string/Farenheit"
+            android:textColor="#F1F1F1"
+            android:textAllCaps="false"
+            android:layout_below="@+id/textView19"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/button11"
+            android:layout_alignStart="@+id/button11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Volume"
+            android:id="@+id/textView20"
+            android:layout_below="@+id/button3"
+            android:layout_alignLeft="@+id/textView19"
+            android:layout_alignStart="@+id/textView19" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4DB6AC"
+            android:maxHeight="50dp"
+            android:minWidth="250dp"
+            android:onClick="Gallons"
+            android:text="@string/Gallons"
+            android:textAllCaps="false"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/textView20"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4DB6AC"
+            android:textAllCaps="false"
+            android:minWidth="250dp"
+            android:onClick="Liters"
+            android:text="@string/Liters"
+            android:textColor="#F1F1F1"
+            android:layout_alignTop="@+id/button6"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3"
+            android:layout_toLeftOf="@+id/button11"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Area"
+            android:id="@+id/textView21"
+            android:layout_below="@+id/button6"
+            android:layout_alignLeft="@+id/button6"
+            android:layout_alignStart="@+id/button6" />
+
+        <Button
+            android:id="@+id/button4a"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#00796B"
+            android:textSize="11dp"
+            android:text="@string/sqmkm"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:onClick="Pounds"
+            android:textColor="#F1F1F1"
+            android:layout_alignTop="@+id/button3a"
+            android:layout_alignLeft="@+id/button6"
+            android:layout_alignStart="@+id/button6" />
+
+        <Button
+            android:id="@+id/button8a"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#4DB6AC"
+            android:minWidth="250dp"
+            android:onClick="Kilograms"
+            android:textSize="11dp"
+            android:textAllCaps="false"
+            android:text="@string/sqkmm"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/button4a"
+            android:layout_alignLeft="@+id/button4a"
+            android:layout_alignStart="@+id/button4a" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Mass"
+            android:id="@+id/textView22"
+            android:layout_below="@+id/button8a"
+            android:layout_alignLeft="@+id/button8a"
+            android:layout_alignStart="@+id/button8a" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00796B"
+            android:minWidth="250dp"
+            android:onClick="Kilograms"
+            android:textAllCaps="false"
+            android:text="@string/Kilograms"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/textView22"
+            android:layout_alignRight="@+id/button8a"
+            android:layout_alignEnd="@+id/button8a" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="100dp"
+            android:minWidth="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00796B"
+            android:text="@string/Pounds"
+            android:onClick="Pounds"
+            android:textColor="#F1F1F1"
+            android:textAllCaps="false"
+            android:layout_alignTop="@+id/button8"
+            android:layout_alignLeft="@+id/button7a"
+            android:layout_alignStart="@+id/button7a"
+            android:layout_alignRight="@+id/button7a"
+            android:layout_alignEnd="@+id/button7a" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fuel Consumption"
+            android:id="@+id/textView23"
+            android:layout_below="@+id/button4"
+            android:layout_alignLeft="@+id/textView22"
+            android:layout_alignStart="@+id/textView22" />
+
+        <Button
+            android:id="@+id/button1a"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4DB6AC"
+            android:minWidth="250dp"
+            android:onClick="Miles"
+            android:text="@string/mpgkpl"
+            android:textAllCaps="false"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/textView23"
+            android:layout_alignLeft="@+id/textView23"
+            android:layout_alignStart="@+id/textView23" />
+
+        <Button
+            android:id="@+id/button5a"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4DB6AC"
+            android:minWidth="250dp"
+            android:onClick="Kilometers"
+            android:textAllCaps="false"
+            android:text="@string/kplmpg"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/textView23"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/clr"
+            android:backgroundTint="#4DB6AC"
+            android:id="@+id/button13"
+            android:textColor="#F1F1F1"
+            android:layout_above="@+id/button6"
+            android:layout_toRightOf="@+id/button7"
+            android:layout_alignRight="@+id/button6a"
+            android:layout_alignEnd="@+id/button6a" />
+
+        <Button
+            android:id="@+id/button7a"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#4DB6AC"
+            android:minWidth="250dp"
+            android:onClick="C"
+            android:text="@string/sqmft"
+            android:textAllCaps="false"
+            android:textSize="11dp"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/button3a"
+            android:layout_alignLeft="@+id/button3a"
+            android:layout_alignStart="@+id/button3a"
+            android:layout_alignRight="@+id/button3a"
+            android:layout_alignEnd="@+id/button3a"
+            android:layout_alignBottom="@+id/button8a" />
+
+        <Button
+            android:id="@+id/button3a"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#00796B"
+            android:minWidth="250dp"
+            android:onClick="F"
+            android:text="@string/sqftm"
+            android:textSize="11dp"
+            android:textAllCaps="false"
+            android:textColor="#F1F1F1"
+            android:layout_below="@+id/textView21"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignStart="@+id/button2"
+            android:layout_toLeftOf="@+id/button11"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

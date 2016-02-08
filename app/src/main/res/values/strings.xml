@@ -1,0 +1,58 @@
+<resources>
+
+    <string name="app_name">Heat Index App</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Output">__________</string>
+    <string name="Convert2">Convert to:</string>
+    <string name="Convert"></string>
+    <string name="clr">Clear</string>
+    <string name="Miles">KM to MI</string>
+    <string name="KM">MI to KM</string>
+    <string name="Gallons">US G to L</string>
+    <string name="Liters">L to US G</string>
+    <string name="Farenheit">C  to  F</string>
+    <string name="Celsius">F  to  C</string>
+    <string name="Pounds">KG to LB</string>
+    <string name="Kilograms">LB to KG</string>
+    <string name="unit">Unit Conversion</string>
+    <string name="open">More Conversions</string>
+    <string name="heat">Heat Index Calculator</string>
+    <string name="mpgkpl">MPG to KPL</string>>
+    <string name="kplmpg">KPL to MPG</string>>
+    <string name="feetmeters">Ft to Meters</string>>
+    <string name="metersfeet">Meters to Ft</string>>
+    <string name="sqftm">Sq Feet to Meters</string>>
+    <string name="sqmft">Sq Meters to Feet</string>>
+    <string name="sqmkm">Sq MI to KM</string>>
+    <string name="sqkmm">Sq KM to MI</string>>
+    <string name="incm">IN to CM</string>>
+    <string name="cmin">CM to IN</string>>
+    <string name="ft">Fahrenheit Toggle</string>>
+    <string name="t">Temperature</string>
+    <string name="h">% Humidity</string>
+    <string name="cal">°F</string>
+    <string name="cal2">°C</string>
+    <string name="wc">Wind Chill Calculator</string>
+    <string name="hii"></string>
+    <string name="hi">Heat Index:</string>
+    <string name="et">Temperature</string>
+    <string name="ewi">Wind Speed</string>
+    <string name="US">°F, MPH</string>
+    <string name="www">Wind Chill:</string>
+    <string name="FFT">°C, km/hr</string>
+    <string name="result"></string>
+
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+    <string name="title_activity_main_activity22">MainActivity22Activity</string>
+    <string name="title_activity_main_activity23">Wind Chill Calculator</string>
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="title_section1">Heat Index</string>
+    <string name="title_section2">Wind Chill</string>
+    <string name="title_section3">Unit Conversion</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

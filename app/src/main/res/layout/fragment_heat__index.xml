@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_deep_teal_500">
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/material_deep_teal_500"
+        android:layout_height="match_parent">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Outside"
+                    android:id="@+id/textView13"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#F1F1F1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/t"
+                    android:id="@+id/textView3"
+                    android:layout_gravity="left|bottom" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp">
+
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:textSize="50dp"
+                        android:gravity="center"
+                        android:background="@drawable/abc_list_selector_background_transition_holo_dark"
+                        android:layout_height="wrap_content"
+                        android:minWidth="300dp"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:paddingRight="30dp"
+                        android:textColor="#F1F1F1"
+                        android:ems="10"
+                        android:id="@+id/editText"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+
+                    <ToggleButton
+                        android:layout_width="34dp"
+                        android:layout_height="67dp"
+                        android:background="@drawable/abc_list_selector_background_transition_holo_dark"
+                        android:text="F"
+                        android:textSize="28dp"
+                        android:textOn="°F"
+                        android:textOff="°C"
+                        android:id="@+id/toggleButton"
+                        android:checked="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Relative"
+                    android:id="@+id/textView14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#F1F1F1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Humidity %"
+                    android:id="@+id/textView4"
+                    android:layout_gravity="left|bottom"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:textSize="50dp"
+                        android:gravity="center"
+                        android:background="@drawable/abc_list_selector_background_transition_holo_dark"
+                        android:layout_height="wrap_content"
+                        android:minWidth="300dp"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:paddingRight="30dp"
+                        android:textColor="#F1F1F1"
+                        android:ems="10"
+                        android:id="@+id/editText2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="67dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="%"
+                        android:textSize="47dp"
+                        android:layout_marginLeft="-34dp"
+                        android:gravity="center"
+                        android:background="@drawable/abc_list_selector_background_transition_holo_dark"
+                        android:id="@+id/textView15"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="true" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="110dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/hi"
+                    android:textColor="#F1F1F1"
+                    android:id="@+id/textView" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/hii"
+                    android:textColor="#F1F1F1"
+                    android:layout_marginTop="10dp"
+                    android:textSize="35dp"
+                    android:id="@+id/textView5"
+                    android:background="@drawable/abc_list_selector_background_transition_holo_dark"
+                    android:minWidth="400dp"
+                    android:maxHeight="100dp"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:backgroundTint="#00796B"
+                    android:id="@+id/button18"
+                    android:textSize="15dp"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="Clear Values"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:layout_marginLeft="20dp"
+                    android:textAllCaps="false"
+                    android:id="@+id/button19"
+                    android:backgroundTint="#00796B"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
