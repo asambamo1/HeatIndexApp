@@ -98,43 +98,45 @@ public class Heat__Index extends Fragment {
     }
 
     public void heatindexM() {
-        Double h = Double.parseDouble(edit.getText().toString());
-        Double R = Double.parseDouble(edit1.getText().toString());
-        if (h < 25) {
-            Snackbar.make(snackbar, "Enter a value of 25°C or greater!", Snackbar.LENGTH_LONG).show();
-        } else if (h > 100) {
-            Snackbar.make(snackbar, "Enter a value of 100°C or less!", Snackbar.LENGTH_LONG).show();
-        } else if (R < 0) {
-            Snackbar.make(snackbar, "Relative Humidity must be at least 0%!", Snackbar.LENGTH_LONG).show();
-        } else if (R > 100) {
-            Snackbar.make(snackbar, "Relative Humidity cannot exceed 100%!", Snackbar.LENGTH_LONG).show();
-        } else {
+        if (edit.getText().length() > 0 && edit1.getText().length() > 0) {
+            Double h = Double.parseDouble(edit.getText().toString());
+            Double R = Double.parseDouble(edit1.getText().toString());
+            if (h < 25) {
+                Snackbar.make(snackbar, "Enter a value of 25°C or greater!", Snackbar.LENGTH_LONG).show();
+            } else if (h > 100) {
+                Snackbar.make(snackbar, "Enter a value of 100°C or less!", Snackbar.LENGTH_LONG).show();
+            } else if (R < 0) {
+                Snackbar.make(snackbar, "Relative Humidity must be at least 0%!", Snackbar.LENGTH_LONG).show();
+            } else if (R > 100) {
+                Snackbar.make(snackbar, "Relative Humidity cannot exceed 100%!", Snackbar.LENGTH_LONG).show();
+            } else {
 
-            Double i = h * 9;
-            Double j = i / 5;
-            Double k = j + 32;
-            Double T = k;
-            Double T2 = T * T;
-            Double R2 = R * R;
-            Double C1 = -42.379;
-            Double C2 = 2.04901523;
-            Double C3 = 10.14333127;
-            Double C4 = -0.22475541;
-            Double C5 = -.00683783;
-            Double C6 = -5.481717E-2;
-            Double C7 = 1.22874E-3;
-            Double C8 = 8.5282E-4;
-            Double C9 = -1.99E-6;
-            Double C10 = C1 + (C2 * T) + (C3 * R) + (C4 * T * R) + (C5 * T2) + (C6 * R2) + (C7 * T2 * R) + (C8 * T * R2) + (C9 * T2 * R2);
-            C10 = (double) Math.round(C10 * 10);
-            C10 = C10 / 10;
-            Double x = C10 - 32;
-            Double y = x * 5;
-            Double z = y / 9;
-            z = (double) Math.round(z * 10);
-            z = z / 10;
+                Double i = h * 9;
+                Double j = i / 5;
+                Double k = j + 32;
+                Double T = k;
+                Double T2 = T * T;
+                Double R2 = R * R;
+                Double C1 = -42.379;
+                Double C2 = 2.04901523;
+                Double C3 = 10.14333127;
+                Double C4 = -0.22475541;
+                Double C5 = -.00683783;
+                Double C6 = -5.481717E-2;
+                Double C7 = 1.22874E-3;
+                Double C8 = 8.5282E-4;
+                Double C9 = -1.99E-6;
+                Double C10 = C1 + (C2 * T) + (C3 * R) + (C4 * T * R) + (C5 * T2) + (C6 * R2) + (C7 * T2 * R) + (C8 * T * R2) + (C9 * T2 * R2);
+                C10 = (double) Math.round(C10 * 10);
+                C10 = C10 / 10;
+                Double x = C10 - 32;
+                Double y = x * 5;
+                Double z = y / 9;
+                z = (double) Math.round(z * 10);
+                z = z / 10;
 
-            text.setText(z.toString() + " °C / " + C10.toString() + " °F");
+                text.setText(z.toString() + " °C / " + C10.toString() + " °F");
+            }
         }
     }
 
