@@ -11,8 +11,9 @@
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:background="@color/material_deep_teal_500"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/svheat"
+        android:background="@color/material_deep_teal_500">
 
         <!-- TODO: Update blank fragment layout -->
         <LinearLayout
@@ -147,11 +148,43 @@
 
             </FrameLayout>
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:backgroundTint="#00796B"
+                    android:id="@+id/button18"
+                    android:textSize="15dp"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="Clear Values"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:layout_marginLeft="20dp"
+                    android:textAllCaps="false"
+                    android:id="@+id/button19"
+                    android:backgroundTint="#00796B"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="110dp">
+                android:layout_marginTop="30dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -186,42 +219,6 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
             </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Calculate"
-                    android:paddingRight="30dp"
-                    android:paddingLeft="30dp"
-                    android:backgroundTint="#00796B"
-                    android:id="@+id/button18"
-                    android:textSize="15dp"
-                    android:textAllCaps="false" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:textSize="15dp"
-                    android:layout_height="wrap_content"
-                    android:text="Clear Values"
-                    android:paddingLeft="13dp"
-                    android:paddingRight="13dp"
-                    android:layout_marginLeft="20dp"
-                    android:textAllCaps="false"
-                    android:id="@+id/button19"
-                    android:backgroundTint="#00796B"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"/>
-
-
-
-            </RelativeLayout>
-
 
         </LinearLayout>
 

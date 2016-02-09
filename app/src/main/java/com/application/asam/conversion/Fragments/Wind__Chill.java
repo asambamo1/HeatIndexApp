@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -36,6 +37,9 @@ public class Wind__Chill extends Fragment {
     ToggleButton t3;
     @Bind(R.id.parent)
     CoordinatorLayout snackbar;
+    @Bind(R.id.svchill)
+    ScrollView sv;
+
 
 
     public static Wind__Chill newInstance(int sectionNumber) {
@@ -87,6 +91,7 @@ public class Wind__Chill extends Fragment {
             } else if (Wi > 300) {
                 Snackbar.make(snackbar, "Enter a value between 0-300 mph!", Snackbar.LENGTH_LONG).show();
             } else {
+                sv.scrollTo(0, sv.getBottom());
                 Double T = Double.parseDouble(e1.getText().toString());
                 Double W = Double.parseDouble(e2.getText().toString());
                 Double WC = 35.74 + 0.6215 * T + (0.4275 * T - 35.75) * Math.pow(W, 0.16);
@@ -115,7 +120,8 @@ public class Wind__Chill extends Fragment {
                 Snackbar.make(snackbar, "Enter a value more than 0 kph!", Snackbar.LENGTH_LONG).show();
             } else if (Wi > 500) {
                 Snackbar.make(snackbar, "Enter a value between 0-500 kph!", Snackbar.LENGTH_LONG).show();
-            } else if (e1.getText().length() > 0 && e2.getText().length() > 0) {
+            } else {
+                sv.scrollTo(0, sv.getBottom());
                 Double T = Double.parseDouble(e1.getText().toString());
                 Double W = Double.parseDouble(e2.getText().toString());
                 Double WC = 13.12 + 0.6215 * T - 11.37 * Math.pow(W, 0.16) + 0.3965 * T * Math.pow(W, 0.16);
@@ -133,7 +139,7 @@ public class Wind__Chill extends Fragment {
 
     @OnClick(R.id.button21)
     public void clear() {
-
+        sv.scrollTo(0, sv.getTop());
         e1.setText("");
         e2.setText("");
         text.setText("");

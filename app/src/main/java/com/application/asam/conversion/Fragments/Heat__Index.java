@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -33,6 +34,8 @@ public class Heat__Index extends Fragment {
     ToggleButton F;
     @Bind(R.id.parent)
     CoordinatorLayout snackbar;
+    @Bind(R.id.svheat)
+    ScrollView sv;
 
 
     public static Heat__Index newInstance(int sectionNumber) {
@@ -73,6 +76,7 @@ public class Heat__Index extends Fragment {
             } else if (R > 100) {
                 Snackbar.make(snackbar, "Relative Humidity cannot exceed 100%!", Snackbar.LENGTH_LONG).show();
             } else {
+                sv.scrollTo(0, sv.getBottom());
                 Double T2 = T * T;
                 Double R2 = R * R;
                 Double C1 = -42.379;
@@ -110,7 +114,7 @@ public class Heat__Index extends Fragment {
             } else if (R > 100) {
                 Snackbar.make(snackbar, "Relative Humidity cannot exceed 100%!", Snackbar.LENGTH_LONG).show();
             } else {
-
+                sv.scrollTo(0, sv.getBottom());
                 Double i = h * 9;
                 Double j = i / 5;
                 Double k = j + 32;
@@ -142,6 +146,7 @@ public class Heat__Index extends Fragment {
 
     @OnClick(R.id.button19)
     public void clear() {
+        sv.scrollTo(0, sv.getTop());
         edit.setText("");
         edit1.setText("");
         text.setText("");
