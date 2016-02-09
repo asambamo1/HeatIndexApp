@@ -68,12 +68,16 @@ public class Heat__Index extends Fragment {
             Double T = Double.parseDouble(edit.getText().toString());
             Double R = Double.parseDouble(edit1.getText().toString());
             if (T < 75) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value of 75°F or greater!", Snackbar.LENGTH_LONG).show();
             } else if (T > 212) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value of 212°F or less!", Snackbar.LENGTH_LONG).show();
             } else if (R < 0) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Relative Humidity must be at least 0%!", Snackbar.LENGTH_LONG).show();
             } else if (R > 100) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Relative Humidity cannot exceed 100%!", Snackbar.LENGTH_LONG).show();
             } else {
                 sv.scrollTo(0, sv.getBottom());
@@ -98,6 +102,8 @@ public class Heat__Index extends Fragment {
                 z = z / 10;
                 text.setText(C10.toString() + " °F / " + z.toString() + " °C");
             }
+        }else{
+            sv.scrollTo(0, sv.getTop());
         }
     }
 
@@ -106,12 +112,16 @@ public class Heat__Index extends Fragment {
             Double h = Double.parseDouble(edit.getText().toString());
             Double R = Double.parseDouble(edit1.getText().toString());
             if (h < 25) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value of 25°C or greater!", Snackbar.LENGTH_LONG).show();
             } else if (h > 100) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value of 100°C or less!", Snackbar.LENGTH_LONG).show();
             } else if (R < 0) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Relative Humidity must be at least 0%!", Snackbar.LENGTH_LONG).show();
             } else if (R > 100) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Relative Humidity cannot exceed 100%!", Snackbar.LENGTH_LONG).show();
             } else {
                 sv.scrollTo(0, sv.getBottom());
@@ -141,6 +151,8 @@ public class Heat__Index extends Fragment {
 
                 text.setText(z.toString() + " °C / " + C10.toString() + " °F");
             }
+        }else{
+            sv.scrollTo(0, sv.getTop());
         }
     }
 

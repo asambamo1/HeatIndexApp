@@ -83,12 +83,16 @@ public class Wind__Chill extends Fragment {
             Double Tp = Double.parseDouble(e1.getText().toString());
             Double Wi = Double.parseDouble(e2.getText().toString());
             if (Tp < -150) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value of -150°F or more!", Snackbar.LENGTH_LONG).show();
             } else if (Tp > 70) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value of 70°F or less!", Snackbar.LENGTH_LONG).show();
             } else if (Wi < 0) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value more than 0 mph!", Snackbar.LENGTH_LONG).show();
             } else if (Wi > 300) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value between 0-300 mph!", Snackbar.LENGTH_LONG).show();
             } else {
                 sv.scrollTo(0, sv.getBottom());
@@ -104,6 +108,8 @@ public class Wind__Chill extends Fragment {
                 z = z / 10;
                 text.setText(WC.toString() + " °F / " + z.toString() + " °C");
             }
+        }else{
+            sv.scrollTo(0, sv.getTop());
         }
     }
 
@@ -113,12 +119,16 @@ public class Wind__Chill extends Fragment {
             Double Tp = Double.parseDouble(e1.getText().toString());
             Double Wi = Double.parseDouble(e2.getText().toString());
             if (Tp < -100) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value of -100°C or less!", Snackbar.LENGTH_LONG).show();
             } else if (Tp > 20) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value of 20°C or less!", Snackbar.LENGTH_LONG).show();
             } else if (Wi < 0) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value more than 0 kph!", Snackbar.LENGTH_LONG).show();
             } else if (Wi > 500) {
+                sv.scrollTo(0, sv.getTop());
                 Snackbar.make(snackbar, "Enter a value between 0-500 kph!", Snackbar.LENGTH_LONG).show();
             } else {
                 sv.scrollTo(0, sv.getBottom());
@@ -134,6 +144,8 @@ public class Wind__Chill extends Fragment {
                 k = k / 100;
                 text.setText(WC.toString() + " °C / " + k.toString() + " °F");
             }
+        }else{
+            sv.scrollTo(0, sv.getTop());
         }
     }
 
