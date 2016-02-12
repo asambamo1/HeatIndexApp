@@ -1,6 +1,8 @@
 package com.application.asam.conversion.Fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -51,17 +53,25 @@ public class Heat__Index extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_heat__index, container, false);
         ButterKnife.bind(this, rootView);
+        loadSavedPreferences();
         return rootView;
     }
 
+    @OnClick(R.id.toggleButton)
+    public void toggle(){
+        savePreferences("Heat_Value", F.isChecked());
+    }
 
     @OnClick(R.id.button18)
     public void heatindex() {
+        //savePreferences("Heat_Value", F.isChecked());
+
         boolean on = F.isChecked();
         if (on) heatindexI();
 
         else heatindexM();
     }
+
 
     public void heatindexI(){
         if (edit.getText().length() > 0 && edit1.getText().length() > 0) {
@@ -163,4 +173,24 @@ public class Heat__Index extends Fragment {
         edit1.setText("");
         text.setText("");
     }
+
+    private void loadSavedPreferences() {
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(this.getContext());
+        boolean heatValue = sharedPreferences.getBoolean("Heat_Value", false);
+        if (heatValue) {
+            F.setChecked(true);
+        } else {
+            F.setChecked(false);
+        }
+    }
+
+    private void savePreferences(String key, boolean value) {
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(this.getContext());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(key, value);
+        editor.commit();
+    }
+
 }

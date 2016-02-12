@@ -1,6 +1,8 @@
 package com.application.asam.conversion.Fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -55,21 +57,26 @@ public class Wind__Chill extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_fragment_wind_chill, container, false);
         ButterKnife.bind(this, rootView);
+        loadSavedPreferences();
         return rootView;
     }
 
     @OnClick(R.id.toggleButton2)
     public void toggle3() {
         t3.toggle();
+        savePreferences("Wind_Value", t2.isChecked());
     }
 
     @OnClick(R.id.toggleButton3)
     public void toggle2() {
         t2.toggle();
+        savePreferences("Wind_Value", t3.isChecked());
     }
 
     @OnClick(R.id.button20)
     public void windchill() {
+        //savePreferences("Wind_Value", t2.isChecked());
+        //savePreferences("Wind_Value", t3.isChecked());
 
         boolean on = (t2.isChecked() && t3.isChecked());
         if (on) windchillI();
@@ -156,4 +163,26 @@ public class Wind__Chill extends Fragment {
         e2.setText("");
         text.setText("");
     }
+
+    private void loadSavedPreferences() {
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(this.getContext());
+        boolean windValue = sharedPreferences.getBoolean("Wind_Value", false);
+        if (windValue) {
+            t2.setChecked(true);
+            t3.setChecked(true);
+        } else {
+            t2.setChecked(false);
+            t3.setChecked(false);
+        }
+    }
+
+    private void savePreferences(String key, boolean value) {
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(this.getContext());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(key, value);
+        editor.commit();
+    }
+
 }
